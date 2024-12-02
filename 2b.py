@@ -14,7 +14,6 @@ for row_org in input:
     for remove_item in range(-1, len(row_org)):
         if remove_item > -1:
             row = row_org.copy()
-            print(row, remove_item)
             row.pop(remove_item)
         else:
             row = row_org
