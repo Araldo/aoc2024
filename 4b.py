@@ -22,7 +22,6 @@ result = 0
 for x, line in enumerate(grid):
     for y, cell in enumerate(line):
         for direction in directions:
-            s = ""
             for idx, step_ in enumerate(direction):
                 if string[idx] != grid[x + step_[0]][y + step_[1]]:
                     break
