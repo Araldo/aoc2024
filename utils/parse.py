@@ -11,3 +11,9 @@ def parse_input_simple(day: int) -> list[Any]:
         except ValueError:
             return data
     return data
+
+def make_grid(input):
+    grid = [[char for char in line] for line in input]
+    X = len(grid[0])
+    Y = len(grid)
+    return grid, X, Y
