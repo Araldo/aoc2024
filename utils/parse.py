@@ -12,8 +12,11 @@ def parse_input_simple(day: int, type=int) -> list[Any]:
             return data
     return data
 
-def make_grid(input):
-    grid = [[char for char in line] for line in input]
+def make_grid(input, border=False):
+    if border:
+        grid = [['-'] + [char for char in line] + ['-'] for line in ['-' * len(input[0])] + input + ['-' * len(input[0])]]
+    else:
+        grid = [[char for char in line] for line in input]
     X = len(grid[0])
     Y = len(grid)
     return grid, X, Y
